@@ -19,13 +19,6 @@
       <li><%= link_to u.username, user_path(u) %></li>
     <% end %>
   </ul>
-  <% users_arr = [] %>
-  <% @users.each do |u| %>
-    <% x = [u.username, u.id] %>
-    <% users_arr.push x %>
-  <% end %>
-  <%= select_tag( :user_id, users_arr ) %>
-</p>
 
 <%= link_to "Edit project", edit_project_path %>
 <%= link_to "Delete project", project_path, :method => :delete, :data => { :confirm => "Are you sure you want to delete: #{@project.title}?" } %>

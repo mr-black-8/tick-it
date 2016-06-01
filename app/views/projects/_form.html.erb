@@ -6,7 +6,18 @@
   <p>
     <%= f.label :description %>
   </p>
+  <p>
     <%= f.text_area :description, size: "24x6", :required => true %>
+  </p>
+  <p>Select project members</p>
+  <p>
+    <% user_arr = [] %>
+    <% @users.each do |u| %>
+      <% x = [u.username, u.id] %>
+      <% user_arr.push x %>
+    <% end %>
+    <%= f.select( :user_ids, user_arr, {}, {:multiple => true}) %>
+  </p>
   <p>
     <%= f.submit "Submit" %>
   </p>
