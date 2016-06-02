@@ -119,6 +119,8 @@
    margin: 50px auto;
    justify-content: center;
    align-items: center;
+   background: gainsboro;
+   opacity: 0.9;
  }
 
 select {

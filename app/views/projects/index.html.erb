@@ -8,7 +8,9 @@
         Tasks:
         <% p.tasks.each do |t| %>
           <% if t.complete %>
-            <div class="task_container_done"><%= t.title %>: <%= t.description %></div>
+            <div class="task_container_done">
+              <%= t.title %>: <%= t.description %><img src="http://i.imgur.com/3CSqyT5.png">
+            </div>  
           <% else %>
             <div class="task_container"><%= t.title %>: <%= t.description %></div>
           <% end %>

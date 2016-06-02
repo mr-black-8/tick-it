@@ -9,13 +9,13 @@
   margin: auto;
   background: gainsboro;
   opacity: 0.9;
-  justify-content: center;
+  justify-content: space-around;;
 }
 
 .project_display {
   width: 300px;
-  margin: 40px;
-  padding: 10px;
+  margin: 40px auto;
+  // padding: 10px;
   opacity: 1;
   border: 1px solid black;
   border-radius: 2px;
@@ -32,6 +32,10 @@
   margin: 1px auto;
   border: 1px solid darkgrey;
   text-decoration: line-through;
+}
+
+.task_container_done img {
+  height: 20px;
 }
 
 .project_show {

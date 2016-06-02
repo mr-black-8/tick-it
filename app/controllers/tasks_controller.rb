@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     task = Task.new task_params
     task.save
 
-    redirect_to projects_path
+    redirect_to project_path(task_params[:project_id])
   end
 
   def edit
