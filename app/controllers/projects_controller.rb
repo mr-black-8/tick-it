@@ -40,9 +40,10 @@ class ProjectsController < ApplicationController
     project.update project_params
     project.save
 
+    project.users.delete_all
+    project.users << @current_user
     params[:project][:user_ids].shift
     user_ids = params[:project][:user_ids]
-
     user_ids.each do |u|
       x = User.find u
       project.users << x unless project.users.include? x

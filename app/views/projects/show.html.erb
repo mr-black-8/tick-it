@@ -6,7 +6,13 @@
   Tasks:
 <ul>
   <% @project.tasks.each do |t| %>
-    <li><%= t.title %>: <%= t.description %> (<%= link_to "Edit", "/tasks/#{t.id}/edit" %>  |  <%= link_to "Delete", "/tasks/#{t.id}", :method => :delete, :data => { :confirm => 'Are you sure you want to delete this task?' } %>)</li>
+    <li>
+      <%= t.title %>: <%= t.description %>
+      (<%= link_to "Edit", "/tasks/#{t.id}/edit" %>  |  <%= link_to "Delete", "/tasks/#{t.id}", :method => :delete, :data => { :confirm => 'Are you sure you want to delete this task?' } %>)
+      <% if t.complete %>
+        <i>  |  DONE</i>
+      <% end %>
+    </li>
   <% end %>
     <li><%= link_to "Add task", "/tasks/new/#{@project.id}" %></li>
 </ul>
